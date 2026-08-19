@@ -77,4 +77,21 @@ document.addEventListener('DOMContentLoaded', () => {
   if (footerYear) {
     footerYear.textContent = new Date().getFullYear();
   }
+
+  // =========================================
+  // Aviso de termos e privacidade
+  // Aparece a cada visita (não fica salvo entre sessões)
+  // =========================================
+  const consentBanner = document.getElementById('consentBanner');
+  const consentAcceptBtn = document.getElementById('consentAcceptBtn');
+
+  if (consentBanner && consentAcceptBtn) {
+    window.setTimeout(() => {
+      consentBanner.classList.add('is-visible');
+    }, 600);
+
+    consentAcceptBtn.addEventListener('click', () => {
+      consentBanner.classList.remove('is-visible');
+    });
+  }
 });

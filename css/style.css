@@ -1499,3 +1499,67 @@ button {
 .legal-content a:hover {
   color: var(--color-black);
 }
+
+/* =========================================
+   Aviso de termos e privacidade (barra fixa)
+========================================= */
+.consent-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1100;
+  background-color: var(--color-black);
+  border-top: 3px solid var(--color-yellow);
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.18);
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.consent-banner.is-visible {
+  transform: translateY(0);
+}
+
+.consent-banner__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 18px;
+}
+
+.consent-banner__text {
+  color: var(--color-gray-200);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.consent-banner__text a {
+  color: var(--color-yellow);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.consent-banner__text a:hover {
+  color: var(--color-white);
+}
+
+.consent-banner__btn {
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .consent-banner__inner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    padding-block: 16px;
+  }
+
+  .consent-banner__btn {
+    width: 100%;
+  }
+}
