@@ -79,19 +79,57 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================
-  // Aviso de termos e privacidade
-  // Aparece a cada visita (não fica salvo entre sessões)
+  // Aviso de termos e privacidade — gatilho por ação
+  // Aparece quando o usuário clica pra falar com o vendedor
+  // ou entrar no grupo do WhatsApp (não ao simplesmente entrar no site)
   // =========================================
-  const consentBanner = document.getElementById('consentBanner');
-  const consentAcceptBtn = document.getElementById('consentAcceptBtn');
+  const consentModal = document.getElementById('consentModal');
+  const consentAcceptBtn = document.getElementById('consentModalAccept');
+  const consentCloseEls = document.querySelectorAll('[data-consent-close]');
+  const consentLinks = document.querySelectorAll('[data-consent-link]');
 
-  if (consentBanner && consentAcceptBtn) {
-    window.setTimeout(() => {
-      consentBanner.classList.add('is-visible');
-    }, 600);
+  if (consentModal && consentAcceptBtn && consentLinks.length) {
+    let pendingLink = null;
+    let lastFocusedEl = null;
+
+    const openConsentModal = (link) => {
+      pendingLink = link;
+      lastFocusedEl = document.activeElement;
+      consentModal.classList.add('is-visible');
+      consentModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('has-modal-open');
+      consentAcceptBtn.focus();
+    };
+
+    const closeConsentModal = () => {
+      pendingLink = null;
+      consentModal.classList.remove('is-visible');
+      consentModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('has-modal-open');
+      if (lastFocusedEl) lastFocusedEl.focus();
+    };
+
+    consentLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        openConsentModal(link);
+      });
+    });
 
     consentAcceptBtn.addEventListener('click', () => {
-      consentBanner.classList.remove('is-visible');
+      const href = pendingLink ? pendingLink.getAttribute('href') : null;
+      closeConsentModal();
+      if (href) window.open(href, '_blank', 'noopener');
+    });
+
+    consentCloseEls.forEach((el) => {
+      el.addEventListener('click', closeConsentModal);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && consentModal.classList.contains('is-visible')) {
+        closeConsentModal();
+      }
     });
   }
 });

@@ -62,19 +62,6 @@
 </head>
 <body>
 
-  <!-- ===== AVISO DE TERMOS E PRIVACIDADE ===== -->
-  <div class="consent-banner" id="consentBanner" role="region" aria-label="Aviso de termos de uso e política de privacidade">
-    <div class="container consent-banner__inner">
-      <p class="consent-banner__text">
-        Ao continuar navegando no Seu João, você concorda com nossos
-        <a href="termos-de-uso.html" target="_blank" rel="noopener">Termos de Uso</a> e nossa
-        <a href="politica-de-privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.
-      </p>
-      <button type="button" class="btn btn--whatsapp consent-banner__btn" id="consentAcceptBtn">Aceitar</button>
-    </div>
-  </div>
-  <!-- ===== /AVISO DE TERMOS E PRIVACIDADE ===== -->
-
   <!-- ===== NAVBAR ===== -->
   <header class="navbar" id="navbar">
     <div class="container navbar__inner">
@@ -100,7 +87,7 @@
           </ul>
         </nav>
 
-        <a href="https://wa.me/5519999745722" target="_blank" rel="noopener" class="btn btn--whatsapp navbar__cta">
+        <a href="https://wa.me/5519999745722" target="_blank" rel="noopener" class="btn btn--whatsapp navbar__cta" data-consent-link>
           <svg class="icon-whatsapp" viewBox="0 0 24 24" aria-hidden="true">
             <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.198.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
             <path fill="currentColor" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.85.497 3.646 1.44 5.212L2 22l4.906-1.412a9.96 9.96 0 0 0 5.098 1.396h.004c5.518 0 10.004-4.486 10.004-10.004C22.012 6.486 17.526 2 12.004 2zm0 18.181h-.003a8.15 8.15 0 0 1-4.157-1.14l-.298-.177-2.913.838.85-2.885-.194-.297a8.15 8.15 0 0 1-1.246-4.358c0-4.508 3.668-8.176 8.166-8.176 2.183 0 4.234.85 5.778 2.396a8.11 8.11 0 0 1 2.393 5.784c0 4.508-3.669 8.176-8.176 8.176z"/>
@@ -143,8 +130,8 @@
         </p>
 
         <div class="hero__actions hero-in hero-in-delay-3">
-          <a href="https://wa.me/5519999745722" target="_blank" rel="noopener" class="btn btn--whatsapp">Quero ser vendedor</a>
-          <a href="https://chat.whatsapp.com/JZ1DkG8x4rW48KSNtLyJwc?s=cl&amp;p=i&amp;mlu=0&amp;ilr=0&amp;amv=1" target="_blank" rel="noopener" class="btn btn--outline">Entrar no grupo</a>
+          <a href="https://wa.me/5519999745722" target="_blank" rel="noopener" class="btn btn--whatsapp" data-consent-link>Quero ser vendedor</a>
+          <a href="https://chat.whatsapp.com/JZ1DkG8x4rW48KSNtLyJwc?s=cl&amp;p=i&amp;mlu=0&amp;ilr=0&amp;amv=1" target="_blank" rel="noopener" class="btn btn--outline" data-consent-link>Entrar no grupo</a>
         </div>
       </div>
     </section>
@@ -402,7 +389,7 @@
           </p>
         </div>
 
-        <a href="https://wa.me/5519999745722" target="_blank" rel="noopener" class="btn btn--whatsapp cta-band__btn">
+        <a href="https://wa.me/5519999745722" target="_blank" rel="noopener" class="btn btn--whatsapp cta-band__btn" data-consent-link>
           <svg class="icon-whatsapp" viewBox="0 0 24 24" aria-hidden="true">
             <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.198.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
             <path fill="currentColor" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.85.497 3.646 1.44 5.212L2 22l4.906-1.412a9.96 9.96 0 0 0 5.098 1.396h.004c5.518 0 10.004-4.486 10.004-10.004C22.012 6.486 17.526 2 12.004 2zm0 18.181h-.003a8.15 8.15 0 0 1-4.157-1.14l-.298-.177-2.913.838.85-2.885-.194-.297a8.15 8.15 0 0 1-1.246-4.358c0-4.508 3.668-8.176 8.166-8.176 2.183 0 4.234.85 5.778 2.396a8.11 8.11 0 0 1 2.393 5.784c0 4.508-3.669 8.176-8.176 8.176z"/>
@@ -433,7 +420,7 @@
           </p>
         </div>
 
-        <a href="https://chat.whatsapp.com/JZ1DkG8x4rW48KSNtLyJwc?s=cl&amp;p=i&amp;mlu=0&amp;ilr=0&amp;amv=1" target="_blank" rel="noopener" class="btn btn--outline-dark cta-band__btn">
+        <a href="https://chat.whatsapp.com/JZ1DkG8x4rW48KSNtLyJwc?s=cl&amp;p=i&amp;mlu=0&amp;ilr=0&amp;amv=1" target="_blank" rel="noopener" class="btn btn--outline-dark cta-band__btn" data-consent-link>
           Entrar no grupo
         </a>
       </div>
@@ -452,7 +439,7 @@
         <p class="footer__tagline">Conectando oportunidades. Gerando bons negócios.</p>
 
         <div class="footer__social">
-          <a href="https://wa.me/5519999745722" target="_blank" rel="noopener" class="footer__social-link" aria-label="WhatsApp">
+          <a href="https://wa.me/5519999745722" target="_blank" rel="noopener" class="footer__social-link" aria-label="WhatsApp" data-consent-link>
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.198.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
               <path fill="currentColor" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.85.497 3.646 1.44 5.212L2 22l4.906-1.412a9.96 9.96 0 0 0 5.098 1.396h.004c5.518 0 10.004-4.486 10.004-10.004C22.012 6.486 17.526 2 12.004 2zm0 18.181h-.003a8.15 8.15 0 0 1-4.157-1.14l-.298-.177-2.913.838.85-2.885-.194-.297a8.15 8.15 0 0 1-1.246-4.358c0-4.508 3.668-8.176 8.166-8.176 2.183 0 4.234.85 5.778 2.396a8.11 8.11 0 0 1 2.393 5.784c0 4.508-3.669 8.176-8.176 8.176z"/>
@@ -491,6 +478,25 @@
     </div>
   </footer>
   <!-- ===== /FOOTER ===== -->
+
+  <!-- ===== MODAL DE ACEITE (Termos e Privacidade) ===== -->
+  <div class="consent-modal" id="consentModal" aria-hidden="true">
+    <div class="consent-modal__overlay" data-consent-close></div>
+    <div class="consent-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="consentModalTitle">
+      <button type="button" class="consent-modal__close" data-consent-close aria-label="Fechar">&times;</button>
+      <h2 id="consentModalTitle" class="consent-modal__title">Antes de continuar</h2>
+      <p class="consent-modal__text">
+        Você será direcionado para o WhatsApp. Ao continuar, você concorda com nossos
+        <a href="termos-de-uso.html" target="_blank" rel="noopener">Termos de Uso</a> e nossa
+        <a href="politica-de-privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.
+      </p>
+      <div class="consent-modal__actions">
+        <button type="button" class="btn btn--outline-dark consent-modal__cancel" data-consent-close>Cancelar</button>
+        <button type="button" class="btn btn--whatsapp consent-modal__accept" id="consentModalAccept">Aceitar e continuar</button>
+      </div>
+    </div>
+  </div>
+  <!-- ===== /MODAL DE ACEITE ===== -->
 
   <script src="js/script.js"></script>
 </body>
