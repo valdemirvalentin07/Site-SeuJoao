@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.seujoao.com.br/</loc>
+    <loc>https://oseujoao.com.br/robots.txt</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.seujoao.com.br/termos-de-uso.html</loc>
+    <loc>https://oseujoao.com.br/termos-de-uso.html</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.seujoao.com.br/politica-de-privacidade.html</loc>
+    <loc>https://oseujoao.com.br/politica-de-privacidade.html</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

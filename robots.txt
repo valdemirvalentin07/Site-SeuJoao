@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.seujoao.com.br/sitemap.xml
+Sitemap: https://oseujoao.com.br/sitemap.xml
