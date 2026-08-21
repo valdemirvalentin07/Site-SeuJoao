@@ -1032,6 +1032,10 @@ button {
   font-size: 1rem;
   max-width: 560px;
   line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.how__subtitle:last-of-type {
   margin-bottom: 56px;
 }
 
@@ -1079,6 +1083,41 @@ button {
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.92rem;
   line-height: 1.6;
+}
+
+/* Variante para a seção "Como funciona" com 6 passos (3 colunas em vez de 4) */
+.how__grid--six {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 880px) {
+  .how__grid--six {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .how__grid--six {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Nota final abaixo dos passos, com link para os documentos legais */
+.how__note {
+  margin-top: 40px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.how__note a {
+  color: var(--color-yellow);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.how__note a:hover {
+  color: var(--color-white);
 }
 
 @media (max-width: 880px) {
@@ -1518,6 +1557,26 @@ button {
   color: var(--color-black);
 }
 
+/* Link "Voltar para o site" no topo das páginas legais */
+.legal-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-gray-700);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  transition: color 0.2s ease;
+}
+
+.legal-back:hover {
+  color: var(--color-yellow-dark);
+}
+
+.legal-content li::marker {
+  color: var(--color-yellow-dark);
+}
+
 /* =========================================
    Modal de aceite de termos e privacidade
    Disparado ao clicar em links que levam ao WhatsApp
@@ -1625,6 +1684,32 @@ body.has-modal-open {
 .consent-modal__accept {
   flex: 1;
 }
+
+.legal-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--color-gray-700);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+      transition: color 0.2s ease;
+    }
+    .legal-back:hover { color: var(--color-yellow-dark); }
+    .legal-content li::marker { color: var(--color-yellow-dark); }
+
+      .legal-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--color-gray-700);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+      transition: color 0.2s ease;
+    }
+    .legal-back:hover { color: var(--color-yellow-dark); }
+    .legal-content li::marker { color: var(--color-yellow-dark); }
 
 @media (max-width: 480px) {
   .consent-modal__dialog {
